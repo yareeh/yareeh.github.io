@@ -11,10 +11,14 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-My blog originally located in http://agilesmagile.blogspot.com/ moving here bit by bit. Starting with new posts.
+I work as a Chief Architect in <a href="http://reaktor.fi/">Reaktor</a>. Specialicing in nothing but doing everything.
+
+My blog originally located in <a href="http://agilesmagile.blogspot.com/">agilesmagile.blogspot.com</a> moving here bit by bit. Starting
+with new posts.
 
 ## I'll blog about:
 
 * Agile
 * Tech
+* Design
 * Biz
