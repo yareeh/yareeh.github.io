@@ -9,4 +9,4 @@ _asset_bundler_cache/
 /.idea_modules
 target/
 *.iml
-
+*~
