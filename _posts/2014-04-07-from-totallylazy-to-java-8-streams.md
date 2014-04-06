@@ -5,9 +5,9 @@ tagline: "Going with the stream"
 description: "Moving from Java 7 and totallylazy to native Java 8 Streams API."
 tags: [java8]
 image:
-  feature: texture-feature-04.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: microraptor.jpg
+  credit: Matthew Martyniuk
+  creditlink: http://commons.wikimedia.org/wiki/File:Microraptor_fossil1.JPG
 ---
 
 Some time last year I had to go back to Java from Scala in my
