@@ -35,9 +35,16 @@ Stream.of(1, 3, 5).filter(even).findFirst(); // returns Option.none()
 Stream.of(1, 2, 3).anyMatch(n -> n == 2); // returns true
 Stream.of(1, 2, 3).anyMatch(even); // returns true
 Stream.of(1, 2, 3).allMatch(odd); // returns false
+Stream.of(1, 2, 3).noneMatch(odd); // returns false
 Stream.of(1, 2, 3).reduce(0, sum); // returns 6
 Stream.of(1, 2, 3).map(String::valueOf).collect(joining(",")); // returns "1,2,3"
 Stream.of(1, 2, 3).map(String::valueOf).collect(joining(":")); // returns "1:2:3"
+Stream.of(asList(1, 2), asList(3, 4)).collect(toMap(a -> a.get(0), a -> a.get(1))); // returns map where 1 -> 2, 3 -> 4
+Stream.of(asList(1, 2), asList(3, 4)).flatMap(a -> a.stream()); // returns 1, 2, 3, 4
+Stream.of(1, 2, 2, 3).distinct(); // returns 1, 2, 3
+iterate(1, n -> n + 1); // returns 1, 2, 3, ...
+generate(() -> "car"); // lazily returns an infinite sequence of "car"s
+concat(Stream.of(1, 2), Stream.of(3, 4)); // returns 1, 2, 3, 4
 {% endhighlight %}
 
 Here is how streams api looks like compared to totallylazy:
