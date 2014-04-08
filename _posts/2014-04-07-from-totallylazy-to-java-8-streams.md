@@ -27,8 +27,8 @@ Stream.of(1, 2, 3, 4).filter(even); // returns 2, 4
 Stream.of(1, 2).map(String::valueOf); // returns "1", "2"
 asList(1, 2).parallelStream().map(String::valueOf); // execute in parallel
 Stream.of(1, 2, 3).limit(2); // returns 1, 2
-Stream.of(1, 2, 3).skip(2); // returns 3
-Stream.of(1, 2, 3).skip(1); // returns 2, 3
+Stream.of(1, 2, 3).skip(2); // returns 3, like take in totallylazy
+Stream.of(1, 2, 3).skip(1); // returns 2, 3, like tail in totallylazy
 Stream.of(1, 2, 3).findFirst(); // returns 1
 Stream.of(1, 2, 3).reduce(sum); // returns 6
 Stream.of(1, 3, 5).filter(even).findFirst(); // returns Option.none()
