@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GDPR-pyyntö</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <style>
+        #template {
+            margin: 60px;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid black;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+        <article class="post">
+
+            <h1 class="post-list-heading">GDPR-pyyntö</h1>
+            <p>Kopioi allaoleva GDPR-pyynnön teksti <a id="mailto">tällä mailto-linkkillä</a>.
+                Muista editoida viestin alku ja allekirjoittaa viesti.</p>
+            <p><a target="_blank" href="https://tietosuoja.fi/kun-haluat-tarkastaa-tietosi">Lisätietoja
+                Tietosuojavaltuutetulta.</a></p>
+            <p><a href="gdpr_en">The same in English.</a></p>
+            <div id="template"></div>
+
+        </article>
+    </div>
+</main>
+<script src="assets/js/snarkdown.js"></script>
+<script>
+    const subject = "GDPR-pyyntö"
+    const template = `Sain teiltä xxx viestin päivämäärällä dd.mm.yyyy.
+
+EU:n GDPR-direktiivin mukaisesti pyydän teiltä seuraavat tiedot:
+
+* Jäljennös minua koskevista henkilötiedoista kaikista järjestelmistänne
+* Mistä henkilötietoni on hankittu?
+* Miksi niitä tarvitaan?
+* Kuinka kauan niitä tarvitaan?
+* Onko henkilötietojani luovutettu tai aiotaanko niitä luovuttaa eteenpäin – jos kyllä, kenelle ja milloin?
+* Onko tietoja siirretty EU:n ulkopuolelle – jos kyllä, miten ne on suojattu?
+* Käytetäänkö tietojen käsittelyssä automaattista käsittelyä – jos, miten se toimii?
+* Miten voin käyttää henkilötietoihin liittyviä oikeuksiani?
+
+Lisäksi saman direktiivin mukaisesti pyydän teitä poistamaan kaikki minua koskevat tiedot järjestelmistänne ja peruutan mahdollisen suostumuksen tietojen tallentamiseen ja käyttämiseen.
+
+Direktiivin mukainen määräaika tuottaa vastaus ylläolevaan pyyntöön on yksi kuukausi.
+
+N.N.
+`
+
+    const link = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(template)}`
+
+    document.getElementById("mailto").setAttribute("href", link)
+    document.getElementById("template").innerHTML = r(template)
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GDPR Request</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <style>
+        #template {
+            margin: 60px;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid black;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+        <article class="post">
+
+            <h1 class="post-list-heading">GDPR Request</h1>
+            <p>Copy the GDPR request text to an email <a id="mailto">with this link</a>.
+                Remember to edit the beginning of the message and to sign it.</p>
+            <p><a target="_blank" href="https://tietosuoja.fi/en/when-you-want-to-inspect-your-data">Additional info
+                from The Data Protection Ombudsman.</a></p>
+            <p><a href="gdpr_fi">Sama suomeksi.</a></p>
+            <div id="template"></div>
+
+        </article>
+    </div>
+</main>
+<script src="assets/js/snarkdown.js"></script>
+<script>
+    const subject = "GDPR Request"
+    const template = `I received message xxx dated yyyy-mm-dd.
+
+According to the GDPR Directive of the European Union I hereby request you to send me the following information:
+
+* A copy of my personal data from all your systems
+* The source from which my personal data was collected
+* Why my personal data is necessary?
+* For how long my personal data will be necessary?
+* Whether my personal data has been disclosed or will be disclosed – and if yes, to whom?
+* Whether my data has been transferred to outside the EU – and if yes, how has it been protected?
+* Whether my data is being processed automatically – and if yes, how does the process function?
+* How I can exercise my rights with regard to my personal data?
+
+I also withdraw any possible consent that I have given to store and handle the data and require you to erase my personal data from your systems.
+
+According to the Directive you are required to reply to my request within one month.
+
+N.N.
+`
+
+    const link = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(template)}`
+
+    document.getElementById("mailto").setAttribute("href", link)
+    document.getElementById("template").innerHTML = r(template)
+</script>
+</body>
+</html>
