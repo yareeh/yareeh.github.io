@@ -10,3 +10,5 @@ _asset_bundler_cache/
 target/
 *.iml
 *~
++.sass-cache
++.jekyll-metadata
