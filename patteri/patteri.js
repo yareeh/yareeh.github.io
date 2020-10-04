@@ -11,7 +11,7 @@ function handleError(err) {
   setStopped()
   // eslint-disable-next-line no-console
   console.log(err)
-  errorLabel.appendChild(document.createTextNode(err))
+  errorLabel.textContent = err
   throw err
 }
 
@@ -52,6 +52,7 @@ function setRunning() {
   )
   config.setAttribute("class", "hide")
   showConfig.removeAttribute("class")
+  errorLabel.textContent = ""
   running = true
 }
 
