@@ -1,0 +1,85 @@
+body {
+  font-family: Sans-Serif, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+#patteri {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.failed-row {
+  flex-grow: 10;
+}
+
+.success-row {
+  flex-grow: 1;
+}
+
+.run-container {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.run {
+  background: gray;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.success {
+  background: green;
+  font-weight: lighter;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.in_progress {
+  animation: active 10s infinite;
+  background: blue;
+}
+
+@keyframes active {
+  33.3% {
+    background-color: blue;
+    color: white;
+  }
+  66.6% {
+    background-color: yellow;
+    color: black;
+  }
+  100% {
+    background-color: blue;
+    color: white;
+  }
+}
+
+.failure {
+  background: red;
+}
+
+.title {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  flex-basis: 100%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
