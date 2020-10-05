@@ -2,10 +2,10 @@ const patteri = document.getElementById("patteri")
 const config = document.getElementById("config")
 const showConfig = document.getElementById("showConfig")
 const errorLabel = document.getElementById("error")
-let running
-let token
-let repo
-let timer
+var running
+var token
+var repo
+var timer
 
 function handleError(err) {
   setStopped()
@@ -120,7 +120,7 @@ function flatMapRuns(workflowRuns, workflowMap) {
       const created = new Date(Date.parse(created_at))
       const updated = new Date(Date.parse(updated_at))
 
-      let conclusionValue
+      var conclusionValue
 
       switch (conclusion) {
         case "failure":
