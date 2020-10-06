@@ -40,13 +40,13 @@ body {
   margin: 4px;
   color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 3vw;
 }
 
 .success {
   background: green;
   font-weight: lighter;
-  font-size: 10px;
+  font-size: small;
   padding: 2px;
 }
 
@@ -74,7 +74,11 @@ body {
   background: red;
 }
 
-.title {
+.failure.dev {
+  background: pink;
+}
+
+.title, .title a {
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
