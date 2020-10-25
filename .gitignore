@@ -12,3 +12,4 @@ target/
 *~
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
